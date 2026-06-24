@@ -1,0 +1,258 @@
+{
+  "id": "music-birthday-2024",
+  "name": "Birthday Music Party",
+  "topic": "music",
+  "version": "1.0",
+  "categories": [
+    {
+      "name": "Dyr",
+      "questions": [
+        {
+          "id": "animal-1",
+          "level": 1,
+          "points": 100,
+          "songTitle": "Haien Kommer",
+          "artist": "Kudos, GOLF",
+          "targetWord": "hai",
+          "hint": "Sjodyr med finner."
+        },
+        {
+          "id": "animal-2",
+          "level": 2,
+          "points": 200,
+          "songTitle": "Mockingbird",
+          "artist": "Eminem",
+          "targetWord": "mockingbird",
+          "hint": "Tittelen er en liten fugl."
+        },
+        {
+          "id": "animal-3",
+          "level": 3,
+          "points": 300,
+          "songTitle": "BIRDS OF A FEATHER",
+          "artist": "Billie Eilish",
+          "targetWord": "fugl",
+          "hint": "Tittelen handler om to av disse."
+        },
+        {
+          "id": "animal-4",
+          "level": 4,
+          "points": 400,
+          "songTitle": "Kursiv",
+          "artist": "Den BB, Erik og Kriss",
+          "targetWord": "gris",
+          "hint": "Et vanlig gaardsdyr."
+        },
+        {
+          "id": "animal-5",
+          "level": 5,
+          "points": 500,
+          "songTitle": "She Wolf",
+          "artist": "Shakira",
+          "targetWord": "ulv",
+          "hint": "Rovdyr som hyler."
+        }
+      ]
+    },
+    {
+      "name": "Mat",
+      "questions": [
+        {
+          "id": "food-1",
+          "level": 1,
+          "points": 100,
+          "songTitle": "Watermelon Sugar",
+          "artist": "Harry Styles",
+          "targetWord": "vannmelon",
+          "hint": "Sommerfrukt i tittelen."
+        },
+        {
+          "id": "food-2",
+          "level": 2,
+          "points": 200,
+          "songTitle": "Lollipop",
+          "artist": "MIKA",
+          "targetWord": "lollipop",
+          "hint": "Sotteri pa pinne."
+        },
+        {
+          "id": "food-3",
+          "level": 3,
+          "points": 300,
+          "songTitle": "Cake by the Ocean",
+          "artist": "DNCE",
+          "targetWord": "kake",
+          "hint": "Bakverk i tittelen."
+        },
+        {
+          "id": "food-4",
+          "level": 4,
+          "points": 400,
+          "songTitle": "American Pie",
+          "artist": "Don McLean",
+          "targetWord": "pai",
+          "hint": "Klassisk amerikansk bakverk."
+        },
+        {
+          "id": "food-5",
+          "level": 5,
+          "points": 500,
+          "songTitle": "edamame",
+          "artist": "Rich Brian, bbno$",
+          "targetWord": "edamame",
+          "hint": "Gronn belgfrukt."
+        }
+      ]
+    },
+    {
+      "name": "Drikke",
+      "questions": [
+        {
+          "id": "drinks-1",
+          "level": 1,
+          "points": 100,
+          "songTitle": "Ompa",
+          "artist": "Soppgirobygget",
+          "targetWord": "gin",
+          "hint": "Klar sprittype."
+        },
+        {
+          "id": "drinks-2",
+          "level": 2,
+          "points": 200,
+          "songTitle": "Espresso",
+          "artist": "Sabrina Carpenter",
+          "targetWord": "espresso",
+          "hint": "Sterk kaffedrikk."
+        },
+        {
+          "id": "drinks-3",
+          "level": 3,
+          "points": 300,
+          "songTitle": "TEXAS HOLD 'EM",
+          "artist": "Beyonce",
+          "targetWord": "whiskey",
+          "hint": "Brun sprittype."
+        },
+        {
+          "id": "drinks-4",
+          "level": 4,
+          "points": 400,
+          "songTitle": "Bloody Mary",
+          "artist": "Lady Gaga",
+          "targetWord": "bloody mary",
+          "hint": "Klassisk cocktail."
+        },
+        {
+          "id": "drinks-5",
+          "level": 5,
+          "points": 500,
+          "songTitle": "Diet Pepsi",
+          "artist": "Addison Rae",
+          "targetWord": "diet pepsi/pepsi",
+          "hint": "Brusmerke i tittelen."
+        }
+      ]
+    },
+    {
+      "name": "Kroppsdeler",
+      "questions": [
+        {
+          "id": "body-1",
+          "level": 1,
+          "points": 100,
+          "songTitle": "Turne",
+          "artist": "Bausa",
+          "targetWord": "ass/rumpe",
+          "hint": "Baksiden av kroppen."
+        },
+        {
+          "id": "body-2",
+          "level": 2,
+          "points": 200,
+          "songTitle": "Pretty Brown Eyes",
+          "artist": "Cody Simpson",
+          "targetWord": "oyner",
+          "hint": "Du ser med disse."
+        },
+        {
+          "id": "body-3",
+          "level": 3,
+          "points": 300,
+          "songTitle": "Ugly Heart",
+          "artist": "GRL",
+          "targetWord": "hjerte",
+          "hint": "Pumper blod."
+        },
+        {
+          "id": "body-4",
+          "level": 4,
+          "points": 400,
+          "songTitle": "I'm Good (Blue)",
+          "artist": "David Guetta, Bebe Rexha",
+          "targetWord": "hands/hender",
+          "hint": "Kroppsdelene pa enden av armene."
+        },
+        {
+          "id": "body-5",
+          "level": 5,
+          "points": 500,
+          "songTitle": "Gold Digger",
+          "artist": "Kanye West",
+          "targetWord": "underarms/underarmer",
+          "hint": "Mellom hand og albue."
+        }
+      ]
+    },
+    {
+      "name": "Designer",
+      "questions": [
+        {
+          "id": "clothing-1",
+          "level": 1,
+          "points": 100,
+          "songTitle": "Prada",
+          "artist": "cassO, RAYE, D-Block Europe",
+          "targetWord": "prada",
+          "hint": "Italiensk motehus."
+        },
+        {
+          "id": "clothing-2",
+          "level": 2,
+          "points": 200,
+          "songTitle": "Hot Girl Bummer",
+          "artist": "blackbear",
+          "targetWord": "birkin",
+          "hint": "Luksusveske forbundet med Hermes."
+        },
+        {
+          "id": "clothing-3",
+          "level": 3,
+          "points": 300,
+          "songTitle": "7 rings",
+          "artist": "Ariana Grande",
+          "targetWord": "tiffany's",
+          "hint": "Luksusjuvelmerke."
+        },
+        {
+          "id": "clothing-4",
+          "level": 4,
+          "points": 400,
+          "songTitle": "Hallo",
+          "artist": "Isah, Dutty Dior",
+          "targetWord": "dior",
+          "hint": "Fransk motehus."
+        },
+        {
+          "id": "clothing-5",
+          "level": 5,
+          "points": 500,
+          "songTitle": "Saint-Tropez",
+          "artist": "Post Malone",
+          "targetWord": "abercrombie fitch",
+          "hint": "Amerikansk motevaremerke."
+        }
+      ]
+    }
+  ]
+}

@@ -914,8 +914,236 @@ select {
   }
 }
 
+/* ── Score flash animation ──────────────────────────────────────────────── */
+@keyframes scoreFlash {
+  0%   { transform: scale(1); color: var(--score-color); }
+  30%  { transform: scale(1.28); color: var(--accent-strong); }
+  60%  { transform: scale(1.12); }
+  100% { transform: scale(1); color: var(--score-color); }
+}
+
+.score-flash { animation: scoreFlash 480ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+
+/* ── Team card active state ─────────────────────────────────────────────── */
+.team-card--active {
+  border-color: var(--active-border);
+  background: linear-gradient(145deg, var(--active-bg), var(--panel-b));
+}
+.picker-label { margin: 0 0 0.54rem; color: var(--text-soft); font-size: 0.9rem; }
+
+/* ── Double Jeopardy tile ───────────────────────────────────────────────── */
+.tile-btn.double-jeopardy { position: relative; border-color: var(--accent-strong); }
+.dj-badge {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 0.7rem;
+  color: var(--accent-strong);
+  line-height: 1;
+}
+
+/* ── Question timer ─────────────────────────────────────────────────────── */
+.question-timer {
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.timer-ring { width: 64px; height: 64px; }
+.timer-ring__track { stroke: var(--line); }
+.timer-ring__progress {
+  stroke: var(--accent-strong);
+  transition: stroke-dashoffset 1s linear, stroke 0.3s ease;
+}
+
+.question-timer--warning .timer-ring__progress { stroke: var(--danger); }
+.question-timer--warning .timer-value { color: var(--danger); animation: timerPulse 1s ease infinite; }
+.timer-value { font-size: 1.3rem; font-weight: 700; color: var(--accent-strong); min-width: 2ch; text-align: center; }
+
+@keyframes timerPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+/* ── Steal modal ────────────────────────────────────────────────────────── */
+.steal-modal { padding: 0.5rem 0; }
+.steal-modal__prompt { margin: 0 0 0.75rem; font-weight: 600; color: var(--text-soft); font-size: 0.95rem; text-align: center; }
+.steal-modal__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+
+/* ── Topic clue ─────────────────────────────────────────────────────────── */
+.topic-clue {
+  margin-top: 0.75rem;
+  padding: 0.65rem;
+  border-radius: 10px;
+  background: var(--hint-bg);
+  border: 1px solid var(--hint-border);
+}
+.question-clue { margin: 0; font-style: italic; color: var(--text); }
+
+/* ── Pack selector screen ───────────────────────────────────────────────── */
+.pack-selector {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.pack-selector__header { text-align: center; }
+.pack-selector__header h1 {
+  margin: 0;
+  font-family: "Great Vibes", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+}
+.pack-selector__subtitle { margin: 0.5rem 0 0; color: var(--text-soft); font-size: 1.1rem; }
+
+.pack-selector__grid { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; }
+
+.pack-card {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1.5rem 1.8rem;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, var(--panel-a), var(--panel-b));
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  text-align: center;
+  min-width: 200px;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.pack-card:hover { transform: translateY(-3px); box-shadow: 0 24px 48px rgba(0,0,0,0.18); }
+.pack-card__icon { font-size: 2.5rem; }
+.pack-card__name { margin: 0; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.4rem; font-weight: 700; }
+.pack-card__meta { margin: 0; color: var(--text-soft); font-size: 0.83rem; }
+.pack-card__topic {
+  margin: 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--accent-strong);
+}
+
+/* ── Game log ───────────────────────────────────────────────────────────── */
+.game-log {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(154, 173, 214, 0.24);
+}
+.game-log h3 { margin: 0 0 0.6rem; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.42rem; }
+.game-log__empty { color: var(--text-soft); font-size: 0.85rem; }
+.game-log__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.game-log__item {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.35rem 0.55rem;
+  border-radius: 8px;
+  font-size: 0.83rem;
+  border: 1px solid transparent;
+}
+.log-category { font-weight: 600; }
+.log-points { color: var(--text-soft); }
+.log-outcome { font-weight: 700; }
+.log-team { color: var(--text-soft); }
+
+.log-correct { background: rgba(53, 183, 130, 0.12); border-color: rgba(53, 183, 130, 0.25); }
+.log-correct .log-outcome { color: #1a9e6d; }
+.log-wrong { background: rgba(200, 60, 80, 0.1); border-color: rgba(200, 60, 80, 0.2); }
+.log-wrong .log-outcome { color: var(--danger); }
+.log-steal { background: rgba(255, 160, 40, 0.1); border-color: rgba(255, 160, 40, 0.22); }
+.log-steal .log-outcome { color: #b87010; }
+.log-none { opacity: 0.65; }
+
+/* ── Admin panel ────────────────────────────────────────────────────────── */
+.admin-panel {
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.admin-panel__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.admin-panel__header h1 { margin: 0; font-family: "Cormorant Garamond", Georgia, serif; }
+.admin-section { margin-bottom: 1.5rem; padding: 1rem; border-radius: 14px; border: 1px solid var(--line); background: linear-gradient(145deg, var(--panel-a), var(--panel-b)); }
+.admin-section h2 { margin: 0 0 1rem; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.4rem; }
+.category-editor { margin-bottom: 1rem; padding: 0.8rem; border-radius: 10px; border: 1px solid var(--line); }
+.question-editor { display: grid; gap: 0.5rem; padding: 0.6rem; border-radius: 8px; border: 1px solid rgba(154,173,214,0.2); margin-bottom: 0.5rem; }
+.question-editor label { display: grid; gap: 0.25rem; font-size: 0.85rem; color: var(--text-soft); }
+.admin-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.75rem; }
+
+/* ── Resume prompt ──────────────────────────────────────────────────────── */
+.resume-prompt {
+  max-width: 420px;
+  width: 90vw;
+  padding: 2rem;
+  text-align: center;
+}
+.resume-prompt h2 {
+  margin: 0 0 0.75rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.9rem;
+}
+.resume-prompt p { margin: 0 0 1.5rem; color: var(--text-soft); line-height: 1.5; }
+.resume-prompt__actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.resume-prompt__actions .primary-btn { min-width: 130px; }
+.resume-prompt__actions .ghost-btn  { min-width: 110px; }
+
+/* ── Inline reset confirmation ──────────────────────────────────────────── */
+.reset-confirm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fade-in 150ms ease;
+}
+.reset-confirm__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--danger);
+  white-space: nowrap;
+}
+
+/* ── Team count controls (settings form) ───────────────────────────────── */
+.team-fieldset {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.75rem 1rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.team-fieldset legend {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-soft);
+  padding: 0 0.25rem;
+}
+.team-count-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--line);
+}
+.team-count-label {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+.team-count-controls .ghost-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 @media (max-width: 1100px) {
   .board-grid { grid-template-columns: repeat(5, minmax(95px, 1fr)); }
   .tile-btn { min-height: 72px; font-size: 1.18rem; }
   .scoreboard { grid-template-columns: 1fr; }
+  .meta-grid { grid-template-columns: repeat(2, 1fr); }
+  .modal-actions { grid-template-columns: repeat(2, 1fr); }
+  .pack-selector__grid { flex-direction: column; align-items: center; }
 }
