@@ -179,11 +179,11 @@ export default function App() {
       <button
         className="admin-fab ghost-btn"
         onClick={() => setScreen('admin')}
-        aria-label="Open question pack builder"
-        title="Question Pack Builder"
-        style={{ position: 'fixed', bottom: '1.5rem', right: '1.5rem', zIndex: 50, borderRadius: '50%', width: '44px', height: '44px', display: 'grid', placeItems: 'center', fontSize: '1.2rem' }}
+        aria-label="Åpne spørsmålsbygger"
+        title="Lag ny spørsmålspakke"
+        style={{ position: 'fixed', bottom: '1.5rem', right: '1.5rem', zIndex: 50, borderRadius: '24px', padding: '0.5rem 0.9rem', display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', fontWeight: 600 }}
       >
-        ✏️
+        ✏️ Ny pakke
       </button>
 
       <main className="app-shell">

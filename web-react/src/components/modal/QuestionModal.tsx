@@ -127,26 +127,28 @@ export function QuestionModal({
         )}
 
         <div className="answer-reveal reveal reveal-4">
-          <button
-            className="ghost-btn"
-            onClick={() => setHintRevealed((p) => !p)}
-            disabled={!hasHint}
-            aria-expanded={hintRevealed}
-          >
-            {hintRevealed ? 'Skjul hint' : 'Vis hint'}
-          </button>
+          <div className="answer-reveal-buttons">
+            <button
+              className="ghost-btn"
+              onClick={() => setHintRevealed((p) => !p)}
+              disabled={!hasHint}
+              aria-expanded={hintRevealed}
+            >
+              {hintRevealed ? 'Skjul hint' : 'Vis hint'}
+            </button>
+            <button
+              className="ghost-btn"
+              onClick={() => setAnswerRevealed((p) => !p)}
+              aria-expanded={answerRevealed}
+            >
+              {answerRevealed ? 'Skjul riktig svar' : 'Vis riktig svar'}
+            </button>
+          </div>
           {hintRevealed && (
             <p className="hint-text" role="status">
               {question.hint ?? question.hostNote ?? 'Ingen hint tilgjengelig.'}
             </p>
           )}
-          <button
-            className="ghost-btn"
-            onClick={() => setAnswerRevealed((p) => !p)}
-            aria-expanded={answerRevealed}
-          >
-            {answerRevealed ? 'Skjul riktig svar' : 'Vis riktig svar'}
-          </button>
           {answerRevealed && (
             <p className="target-word" role="status">{question.targetWord}</p>
           )}

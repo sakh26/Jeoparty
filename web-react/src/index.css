@@ -548,6 +548,7 @@ select {
 }
 
 .toggle-row { display: flex; gap: 0.45rem; align-items: center; color: var(--text); }
+.settings-form label.toggle-row { display: flex; gap: 0.45rem; align-items: center; }
 .form-actions { margin-top: 0.25rem; }
 
 .song-library {
@@ -818,6 +819,12 @@ select {
 
 .answer-reveal {
   margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.answer-reveal-buttons {
   display: flex;
   gap: 0.6rem;
   align-items: center;
